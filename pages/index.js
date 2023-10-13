@@ -251,6 +251,8 @@ export default function Home() {
     return setDetail(detail);
   }
 
+  console.log(detail);
+
   return (
     <>
       <Header />
@@ -488,7 +490,9 @@ export default function Home() {
                                 alt="anh"
                               />
                             </div>
-                            {row.first_name} {row.last_name}
+                            <p>
+                              {row.first_name} {row.last_name}
+                            </p>
                           </TableCell>
                           <TableCell className="border-r">
                             {row.email}
@@ -777,6 +781,18 @@ export default function Home() {
                     type="email"
                     className="border w-full px-3 py-1 outline-none rounded-md "
                     value={detail[0].username}
+                  />
+                </div>
+              </div>
+
+              <div className="mb-3">
+                <p className="mb-1">Birth Day</p>
+                <div>
+                  <input
+                    disabled
+                    type="email"
+                    className="border w-full px-3 py-1 outline-none rounded-md "
+                    value={detail[0].date_of_birth}
                   />
                 </div>
               </div>
