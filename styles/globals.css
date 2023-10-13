@@ -53,6 +53,10 @@ body {
   }
 }
 
+.flex {
+  display: flex !important;
+}
+
 .submenu {
   max-height: 0;
   overflow: hidden;
