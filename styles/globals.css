@@ -17,11 +17,68 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #f1f3f4;
+}
+
+.border-r {
+  border-right: 1px solid #dadada !important;
+}
+
+.container {
+}
+
+.menu {
+  transform: translateX(-100%);
+}
+
+.menuMobileShow {
+  animation: show 0.5s both;
+  -webkit-animation: show 0.5s both;
+}
+
+@keyframes show {
+  from {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.submenu.open {
+  max-height: 500px; /* Hoặc giá trị tối ưu cho chiều cao submenu */
+}
+
+header {
+  box-shadow: 0 0 10px #aaa;
+}
+
+.file-button {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #ccc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.file-button input[type="file"] {
+  display: none;
+}
+
+.boxShadow {
+  box-shadow: 0 0 10px #aaa;
 }
